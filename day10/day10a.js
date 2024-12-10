@@ -14,7 +14,9 @@ const tileTypes = {
     '7' : [ SOUTH, WEST ],
     'F' : [ SOUTH, EAST ],
     'S' : [ NORTH, SOUTH, EAST, WEST ],
-    '.' : []
+    '.' : [],
+    'I' : [],
+    'O' : [],
 }
 
 const matrix = input.split('\n').map((row) => row.split(''));
@@ -102,4 +104,4 @@ while(true) {
     }
 }
 
-console.log(paths.map(p => p.length));
+console.log((paths.reduce((acc, val) => acc + val.length, 0)/2)-1);
